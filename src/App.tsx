@@ -1,48 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Countdown from "./components/Countdown";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const currentYear = new Date().getFullYear();
 
   return (
-    <>
-      <div>
-        <a
-          href="https://vite.dev"
-          target="_blank"
-        >
-          <img
-            src={viteLogo}
-            className="logo"
-            alt="Vite logo"
-          />
-        </a>
-        <a
-          href="https://react.dev"
-          target="_blank"
-        >
-          <img
-            src={reactLogo}
-            className="logo react"
-            alt="React logo"
-          />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div className="flex h-screen flex-col items-center justify-center gap-8 bg-[#121212]">
+      <h2 className="text-2xl font-medium text-white uppercase sm:text-4xl">
+        Coming soon ...
+      </h2>
+      <Countdown targetDate="2025-11-17T00:00:00" />
+      <p className="text-sm text-slate-300">
+        Emediong Udoh &copy; 2020 - {currentYear}.
       </p>
-    </>
+    </div>
   );
 }
 
